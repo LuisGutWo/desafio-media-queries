@@ -22,10 +22,20 @@ body {
     "table"
     "footer";
 }
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .main {
     width: 100%;
     margin-bottom: 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "aside-navbar main main main"
+      "table table table table"
+      "footer footer footer footer";
+  }
+}
+@media (min-width: 992px) {
+  .main {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "header aside-navbar aside-navbar aside-navbar aside-navbar"
@@ -47,10 +57,10 @@ body {
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .header {
-    flex-direction: column;
-    justify-content: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     min-height: 100%;
     background-color: #cfd2cfdf;
   }
@@ -95,8 +105,11 @@ body {
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .header-navbar {
-    flex-direction: column;
-    gap: 2.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 12.5rem;
+    height: 1.5rem;
     font-weight: bold;
   }
 }
@@ -118,7 +131,6 @@ body {
 @media (min-width: 576px) and (max-width: 991px) {
   .header-navbar a {
     display: flex;
-    font-size: 1.1rem;
   }
 }
 @media (min-width: 992px) {
@@ -159,9 +171,18 @@ body {
   background-color: #121212;
   color: #fff;
 }
-@media (min-width: 992px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .aside-navbar {
     flex-wrap: wrap;
+    min-height: 100%;
+    width: 12rem;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 992px) {
+  .aside-navbar {
+    height: 7.5rem;
+    overflow: hidden;
   }
 }
 
@@ -171,6 +192,11 @@ body {
   margin-bottom: 0.6rem;
   margin-top: 0.6rem;
   text-align: center;
+}
+@media (min-width: 575px) and (max-width: 767px) {
+  .aside-navbar h2 {
+    margin-top: 20px;
+  }
 }
 
 /* aside button */
@@ -186,10 +212,12 @@ body {
   color: #fff;
   border-radius: 5px;
   overflow: hidden;
+  flex-basis: auto;
+  flex-shrink: 2;
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .search-filter {
-    width: 40rem;
+    width: 10rem;
   }
 }
 @media (min-width: 992px) {
