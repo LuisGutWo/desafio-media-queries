@@ -30,7 +30,7 @@ body {
     grid-template-areas:
       "header header header header"
       "aside-navbar main main main"
-      "table table table table"
+      "aside-navbar table table table"
       "footer footer footer footer";
   }
 }
@@ -51,7 +51,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   background-color: #fff;
-  height: 6.8rem;
+  min-height: 20vh;
   padding: 0;
   overflow: hidden;
 }
@@ -61,8 +61,8 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    min-height: 100%;
-    background-color: #cfd2cfdf;
+    min-height: 20vh;
+    background-color: #fff;
   }
 }
 @media (min-width: 992px) {
@@ -83,12 +83,12 @@ body {
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .header img {
-    width: 8.7rem;
+    width: 15%;
   }
 }
 @media (min-width: 992px) {
   .header img {
-    width: 10.5rem;
+    width: 65%;
   }
 }
 
@@ -98,8 +98,7 @@ body {
   justify-content: space-evenly;
   align-items: flex-start;
   width: 6.2rem;
-  height: 3.1rem;
-  margin-right: 0;
+  min-height: 20vh;
   flex-basis: auto;
   flex-shrink: 1;
 }
@@ -109,14 +108,14 @@ body {
     align-items: center;
     gap: 1rem;
     padding-right: 12.5rem;
-    height: 1.5rem;
+    min-height: 20vh;
     font-weight: bold;
   }
 }
 @media (min-width: 992px) {
   .header-navbar {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 20px;
     font-weight: bold;
   }
 }
@@ -152,7 +151,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: #3f4e4f;
+  color: #3f4e4f99;
 }
 @media (min-width: 576px) {
   .header i {
@@ -206,8 +205,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
-  width: 17.5rem;
-  height: 2.8rem;
+  min-width: 70%;
+  height: 25%;
   background-color: #d52b1e;
   color: #fff;
   border-radius: 5px;
@@ -217,12 +216,13 @@ body {
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .search-filter {
-    width: 10rem;
+    min-width: 80%;
+    height: 10%;
   }
 }
 @media (min-width: 992px) {
   .search-filter {
-    width: 60rem;
+    min-width: 85%;
   }
 }
 
@@ -235,15 +235,16 @@ body {
   gap: 1.2rem;
   margin-top: 1.2rem;
   height: 28.7rem;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .main-container {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-evenly;
     overflow-y: scroll;
-    padding: 1.2rem;
-    height: 70vh;
+    min-width: 100vw;
+    padding: 2%;
+    height: 60vh;
     margin-top: 0;
     margin-left: 0.6rem;
     margin-right: 0.6rem;
@@ -254,8 +255,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: space-evenly;
     overflow-y: scroll;
+    min-width: 70vw;
     padding: 1.2rem;
-    height: 75vh;
+    height: 80vh;
     margin-top: 0;
   }
 }
@@ -270,6 +272,17 @@ body {
   overflow: hidden;
   box-shadow: #3f4e4f;
   border: rgba(166, 166, 166, 0.579) solid 1.5px;
+}
+@media (max-width: 576px) and (max-width: 991px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    width: 100%;
+    min-height: 70%;
+  }
 }
 .card:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
@@ -353,7 +366,7 @@ body {
   height: 4.3rem;
 }
 .card-content h1 {
-  font-size: 0.8rem;
+  font-size: 65%;
   margin: 0;
 }
 
@@ -370,9 +383,8 @@ body {
 }
 .btn:hover {
   background-color: #121212;
-  box-shadow: inset 0 0 20px rgba(9, 24, 30, 0.5),
-    0 0 20px rgba(18, 52, 65, 0.4);
-  outline-color: rgba(49, 138, 172, 0);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.4);
+  outline-color: rgba(0, 0, 0, 0);
   outline-offset: 80px;
   text-shadow: 1px 1px 6px #fff;
   transition: all 0.2s ease;
@@ -386,12 +398,13 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  height: 5rem;
+  height: 100%;
+  padding: 2%;
   border: 0;
 }
 @media (min-width: 576px) {
   .table-container {
-    height: 6.2rem;
+    height: 100%;
     margin-bottom: 0px;
   }
 }
@@ -418,20 +431,20 @@ body {
   grid-area: footer;
   background-color: #222424;
   color: #fff;
-  height: 6.2rem;
+  height: 90%;
   justify-content: center;
   align-items: center;
 }
 @media (min-width: 576px) and (max-width: 991px) {
   .footer {
-    height: 6.2rem;
+    height: 100%;
     margin-bottom: 0px;
     font-size: 0.7rem;
   }
 }
 @media (min-width: 992px) {
   .footer {
-    height: 6.2rem;
+    height: 100%;
     margin-bottom: 0px;
   }
 }
@@ -442,4 +455,7 @@ body {
   font-size: 1.5rem;
   justify-content: space-evenly;
   margin-top: 10px;
+}
+.footer p {
+  font-size: 70%;
 }
