@@ -1,0 +1,47 @@
+// font family
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$font-family-base: 'Roboto', sans-serif;
+
+
+//bootstrap styles
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+// scss modules
+@import 'header';
+@import 'aside';
+@import 'main-section';
+@import 'table';
+@import 'footer';
+
+
+/* body main container */
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "aside-navbar"
+    "main"
+    "table"
+    "footer";
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    width: 100%;
+    margin-bottom: 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "aside-navbar main main main"
+      "aside-navbar table table table"
+      "footer footer footer footer";
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header aside-navbar aside-navbar aside-navbar aside-navbar"
+      "header main main main main"
+      "footer table table table table";
+  }
+}

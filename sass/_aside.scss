@@ -1,0 +1,74 @@
+/* aside navbar container */
+
+.aside-navbar {
+  grid-area: aside-navbar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #121212;
+  color: #fff;
+  margin-top: 0;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    flex-wrap: wrap;
+    min-height: 100%;
+    width: 12rem;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 992px) {
+    height: 7.5rem;
+    overflow: hidden;
+  }
+}
+
+/* aside title */
+.aside-navbar h2 {
+  color: #fff;
+  margin-bottom: 0.6rem;
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 100%;
+
+  @media (min-width: 575px) and (max-width: 991px) {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.5rem;
+  }
+}
+
+.aside-navbar h4 {
+  font-size: 90%;
+  margin: 0;
+}
+
+/* aside button */
+.search-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  min-width: 70%;
+  height: 25%;
+  background-color: #d52b1e;
+  color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  flex-basis: auto;
+  flex-shrink: 2;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    min-width: 80%;
+    height: 10%;
+  }
+
+  @media (min-width: 992px) {
+    min-width: 85%;
+  }
+}

@@ -1,0 +1,108 @@
+/* header container*/
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  min-height: 20vh;
+  padding: 0;
+  overflow: hidden;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    min-height: 20vh;
+    min-width: 100%;
+    background-color: rgba(185, 185, 185, 0.793);
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100%;
+    background-color: #cfd2cfdf;
+  }
+}
+
+/* header image */
+.header img {
+  width: 8.7rem;
+  margin-left: 1rem;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    width: 15%;
+  }
+
+  @media (min-width: 992px) {
+    width: 80%;
+    padding-right: 20px;
+    margin: 0;
+  }
+}
+
+/* header navbar only in desktop view*/
+.header-navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 6.2rem;
+  min-height: 20vh;
+  flex-basis: auto;
+  flex-shrink: 1;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 20rem;
+    min-height: 20vh;
+    font-weight: bold;
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: column;
+    gap: 20px;
+    font-weight: bold;
+  }
+}
+
+/* header navbar anchors */
+.header-navbar a {
+  display: none;
+  font-size: 1.1rem;
+  color: #212529a1;
+  text-decoration: none;
+
+  @media (min-width: 576px) and (max-width: 991px) {
+    display: flex;
+  }
+
+  @media (min-width: 992px) {
+    display: flex;
+  }
+
+  &:hover {
+    color: #d52b1e;
+    text-shadow: 0px 0px 3px #fff;
+    transition: all 0.2s ease;
+  }
+}
+
+/* header icons */
+.header i {
+  height: 3.1rem;
+  width: 3.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #3f4e4f99;
+
+  @media (min-width: 576px) {
+    display: none;
+  }
+}
