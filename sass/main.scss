@@ -16,6 +16,17 @@ $font-family-base: 'Roboto', sans-serif;
 
 
 /* body main container */
+
+body {
+  height: 805px;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
 .main {
   height: 100vh;
   display: grid;
